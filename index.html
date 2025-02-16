@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars">
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="background.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <div class="twinkling"></div>
+
+    <div class="container">
+        <div class="music-controls">
+            <button id="toggleHappyMusic" class="music-btn">
+                <span class="music-icon">🎵</span> Love Song
+            </button>
+            <button id="toggleSadMusic" class="music-btn">
+                <span class="music-icon">💔</span> Heartbreak
+            </button>
+        </div>
+
+        <div class="calculator-card">
+            <div class="hearts-container">
+                <div class="floating-heart">❤️</div>
+                <div class="floating-heart" style="animation-delay: 2s">💖</div>
+                <div class="floating-heart" style="animation-delay: 4s">💝</div>
+            </div>
+
+            <h1>Love Calculator</h1>
+            <div class="input-group">
+                <div class="person-input">
+                    <label for="name1">Your Name</label>
+                    <input type="text" id="name1" placeholder="Enter your name">
+                    <select id="zodiac1">
+                        <option value="">Select Your Zodiac</option>
+                        <option value="aries">Aries</option>
+                        <option value="taurus">Taurus</option>
+                        <option value="gemini">Gemini</option>
+                        <option value="cancer">Cancer</option>
+                        <option value="leo">Leo</option>
+                        <option value="virgo">Virgo</option>
+                        <option value="libra">Libra</option>
+                        <option value="scorpio">Scorpio</option>
+                        <option value="sagittarius">Sagittarius</option>
+                        <option value="capricorn">Capricorn</option>
+                        <option value="aquarius">Aquarius</option>
+                        <option value="pisces">Pisces</option>
+                    </select>
+                </div>
+
+                <div class="heart-divider">
+                    <span class="heart-icon">❤️</span>
+                </div>
+
+                <div class="person-input">
+                    <label for="name2">Their Name</label>
+                    <input type="text" id="name2" placeholder="Enter their name">
+                    <select id="zodiac2">
+                        <option value="">Select Their Zodiac</option>
+                        <option value="aries">Aries</option>
+                        <option value="taurus">Taurus</option>
+                        <option value="gemini">Gemini</option>
+                        <option value="cancer">Cancer</option>
+                        <option value="leo">Leo</option>
+                        <option value="virgo">Virgo</option>
+                        <option value="libra">Libra</option>
+                        <option value="scorpio">Scorpio</option>
+                        <option value="sagittarius">Sagittarius</option>
+                        <option value="capricorn">Capricorn</option>
+                        <option value="aquarius">Aquarius</option>
+                        <option value="pisces">Pisces</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="calculateBtn" class="calculate-btn">Calculate Love</button>
+
+            <div id="result" class="result hidden">
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                    <div id="percentage" class="percentage">0%</div>
+                </div>
+                <p id="message" class="message"></p>
+                <div id="compatibility" class="compatibility"></div>
+            </div>
+
+            <div id="loveStory" class="love-story hidden">
+                <h3>Your Love Story</h3>
+                <p id="storyText"></p>
+            </div>
+
+            <div id="loveLetter" class="love-letter hidden">
+                <h3>Love Letter</h3>
+                <div id="letterText" class="letter-content"></div>
+            </div>
+
+            <div id="loveQuote" class="love-quote hidden">
+                <h3>Love Quote of the Day</h3>
+                <p id="quoteText"></p>
+            </div>
+        </div>
+    </div>
+
+    <audio id="happyMusic" loop>
+        <source src="https://www.chosic.com/wp-content/uploads/2023/07/romantic-piano.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="sadMusic" loop>
+        <source src="https://www.chosic.com/wp-content/uploads/2023/04/sad-violin.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
