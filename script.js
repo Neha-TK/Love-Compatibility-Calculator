@@ -179,9 +179,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1000);
 
             // Play appropriate music based on score
-            if (finalScore >= 70) {
+            if (finalScore >= 50) {
                 toggleMusic(happyMusic, toggleHappyMusic);
-            } else if (finalScore < 40) {
+            } else if (finalScore < 50) {
                 toggleMusic(sadMusic, toggleSadMusic);
             }
         }, 1000);
