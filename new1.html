@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ship Name Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #fce4ec;
+        }
+        h1 {
+            color: #d81b60;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid #d81b60;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #d81b60;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #ad1457;
+        }
+        #result {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #880e4f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>💕 Couple-Ship Name Generator 💕</h1>
+    <input type="text" id="name1" placeholder="Enter First Name">
+    <input type="text" id="name2" placeholder="Enter Second Name">
+    <button onclick="generateShipName()">Get Couple-Ship Name</button>
+
+    <div id="result"></div>
+
+    <script>
+        function generateShipName() {
+            let name1 = document.getElementById("name1").value.trim();
+            let name2 = document.getElementById("name2").value.trim();
+
+            if (name1 === "" || name2 === "") {
+                document.getElementById("result").innerText = "Please enter both names!";
+                return;
+            }
+
+            let shipName = mixNames(name1, name2);
+            document.getElementById("result").innerHTML = `💖 Your Couple-Ship Name: <b>${shipName}</b>`;
+        }
+
+        function mixNames(name1, name2) {
+            let half1 = name1.substring(0, Math.ceil(name1.length / 2));
+            let half2 = name2.substring(Math.floor(name2.length / 2));
+
+            return half1 + half2;
+        }
+    </script>
+
+</body>
+</html>
