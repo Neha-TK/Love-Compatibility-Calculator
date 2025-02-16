@@ -25,12 +25,12 @@ body {
 }
 
 .stars {
-    background: #000 url('https://i.imgur.com/YKY28eT.png') repeat top center;
+    background: #000 url('stars.png') repeat top center;
     z-index: 0;
 }
 
 .twinkling {
-    background: transparent url('https://i.imgur.com/XYMF4ca.png') repeat top center;
+    background: transparent url('twinkle.png') repeat top center;
     animation: move-twinkle 200s linear infinite;
     z-index: 1;
 }
@@ -163,6 +163,7 @@ input:focus, select:focus {
     font-size: 1.1rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-bottom: 30px;
 }
 
 .calculate-btn:hover {
@@ -272,6 +273,14 @@ input:focus, select:focus {
     font-size: 1.2rem;
     animation: spin 2s linear infinite;
 }
+
+a{
+    text-decoration: none;
+}
+
+
+
+
 
 @keyframes spin {
     from { transform: rotate(0deg); }
